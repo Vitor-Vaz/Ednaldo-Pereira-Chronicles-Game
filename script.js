@@ -7,13 +7,14 @@ var cache = 0;
 
 
 
-function darNome(){
-    var nome = document.getElementById("nome-input").value;
-    return nome; 
+var nome;
+function getName()
+{
+    var inp = document.getElementById("nome-input").value;
+    nome = inp;
+    console.log("O NOME É"+ inp);
+    inicio();
 }
-var nome = darNome();
-
-console.log(nome);
 
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 //                         FUNÇÃO DE INICIO
