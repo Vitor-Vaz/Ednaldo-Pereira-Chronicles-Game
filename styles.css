@@ -1,22 +1,24 @@
+
 html{
     color: white;
     font-family: 'Bangers', cursive;
+
 }
 
 .titulo{
     color: black;
     background-color: #f7f307fd;
-    height: 15vh;
+    height: 10vh;
     font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
 
 .main-container {
     height: 85vh;
-    background: url("background.jpg");
+    background: url("img/background.jpg");
     display: flex;
     flex-direction: column;
     justify-content:space-around;
@@ -39,24 +41,217 @@ img{
     border-radius: 10px;
 }
 
-.nome {
-}
 
-button{
+
+.btn, .reset-button{
     font-family: 'Bangers', cursive;
     width: 120px;
     height: 30px;
     background-color: #f7f307fd;
     border-radius: 5px;
-} 
+    border-color: black;
+}
 
 input {
     font-family: 'Bangers', cursive;
+    height: 20px;
 }
 
-button:hover{
+.btn:hover{
     background-color: black;
     color: #f7f307fd;
     transform: scale(1.1);
     transition: 0.1s;
+}
+
+.animation{
+    color: rgb(238, 26, 11);
+    font-family: 'Bangers', cursive;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e5b6fd;
+    border-radius: 2px;
+}
+
+@keyframes animation {
+    0% { opacity: 1; }
+    25% { opacity: 0.75;}
+    50% { opacity: 0.5; }
+    75% { opacity: 0.25;}
+    100% { opacity: 0; }
+}
+
+.animation {
+    animation: animation 1.5s linear infinite;
+ }
+
+@keyframes fadeElement{
+    0%{
+        opacity: 0;
+        transform: scale3d(.75, .75, 1);
+
+    }
+    50%{
+        opacity: 0;
+        transform: scale3d(.75, .75, 1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+img{
+    animation: fadeElement .5s;
+    
+}
+
+.introducao p{
+    animation: fadeElement 1s;
+
+}
+
+.btn {
+    animation: fadeElement 2s;
+}
+
+
+
+
+.footer{
+    height: 5vh;
+    background-color: #f7f307fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    bottom:0;
+}
+
+.footer-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 15%;
+}
+
+.mode{
+    display: flex;
+    justify-content: space-around;
+}
+
+.reset-button:hover {
+    background-color: #f7f307fd;
+    color: black;
+}
+
+
+/* classes anonimas*/
+
+.titulo-noturno{
+    font-family: "Press Start 2P", cursive;
+    color: #e3e6f5;
+    background-image: url('img/ceu-oito-bits.jpg');
+    font-size: 20px;
+
+}
+
+.main-container-noturno {
+    background: url("img/background-8bits.jpg");
+
+}
+
+.footer-noturno{
+    background-color: #080808;
+    color: #e3e6f5;
+    font-family: "Press Start 2P", cursive;
+    font-size: 8px;
+}
+
+.reset-button {
+    background-color:black;
+    color:#f7f307fd;
+    width: 100%;
+    animation: fadeElement 2s;
+}
+
+.reset-button:hover{
+    background-color: #f7f307fd;
+    color: black;
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+
+/* versão mobile */
+
+@media(max-width: 800px){
+    .titulo{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .main-container{
+        text-align: center;
+    }
+
+    img{
+        width: 65vh;
+        height: 40vh;
+    }
+
+    #historia-painel{
+        width: 61vh;
+    }
+
+    #escolhas-painel{
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        justify-content: space-around;
+        width: 65vh;
+        
+    }
+
+
+
+    .animation{
+        width: 65vh; 
+    }
+
+    p{
+        
+        font-size: 15px;
+    }
+
+    div .nome{
+        font-size: 15px;
+    }
+
+    #nome-input{
+        width: 97%; 
+        border-radius: 7px;
+        height: 5vh;
+        font-size: 18px;
+    }
+
+    .btn{
+        
+       width: 100%; 
+    }
+
+    .titulo-noturno{
+        font-size: 15px;
+    }
+
+    .footer-div{
+        width: 50%;
+    }
+
+    .footer-noturno p {
+        font-size: 8px;
+    }
 }
