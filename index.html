@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edinaldo Pereira Chronicles</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    </head>
+    <header class="titulo" id="titu">
+            <h1>Ednaldo Pereira Chronicles</h1>
+    </header>
+
+    <body id="body">
+
+
+        <div class="main-container" id="caixa-principal">
+
+            <div id="img-div">
+                <img src="img/Ednaldo-capa.jpg" id="img-id">
+            </div>
+            
+
+            <div class="introducao" id="historia-painel">
+                <p id="demo">
+                    Bem vindo ao Ednaldo Pereira Chronicles! Nessa aventura, você será empresario do maior cantor que a musica Brasileira já presenciou, você tomará decisões importantes em relação a carreira dele, e essas decisões precisam estar de acordo com suas vontades senão você será demitido ou algo pior. Boa sorte!
+                </p>
+
+            </div>
+
+            <div id="escolhas-painel">
+                <div class="nome" id="diga-seu-nome">
+                    Por favor, nos diga seu nome para começar.
+                </div>
+
+                <input id="nome-input" type="text">
+                <button onclick="getName()" id="button-inicial" class="btn">
+                    começar
+                </button>
+
+            </div>
+
+        </div>
+    </body>
+
+    <footer class="footer" id="fot">
+
+            <div class="footer-div">
+                <p>Modo Noturno</p>
+                <label> <input name="radio-buttons" value="1" type="radio" oninput="teste()" > On</label>
+                <label> <input name="radio-buttons" value="0" type="radio" oninput="teste()" checked="checked"> Off</label>
+            </div>
+
+    </footer>
+    <script src="estrutura-do-game.js"></script>
+    <script src="reset-button.js"></script>
+    <script src="modo-noturno.js"></script>
+</html>
